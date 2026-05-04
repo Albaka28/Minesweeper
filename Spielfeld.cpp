@@ -7,32 +7,35 @@ class Spielfeld{
   int breite = 0;
   int anzahlBomben = 0;                         // weiß nicht wie es im game sein wird (Maxi)
 
-  void setHöhe(int höhe){
-    cin << höhe;
-  }
-  void setBreite(int breite){
-    cin << breite;
-  }
-  
+  void setHöhe(int h){höhe = h;}
+  void setBreite(int b){breite = b;}
+  int getHöhe(){return höhe;}
+  int setBreite(){return breite;}
+
   void bauSpielfeld(int höhe, int breite){
 
-
    for(int i = 0; i < höhe; i++){
-    cout << "[] ";
-      for(int j = 0; j < breite; j++){
-        cout << "[] ";
+    cout << " [_] ";
+      for(int j = 1; j < breite; j++){
+        cout << " [_] ";
       }
-      cout << "\n";
+      cout << " \n \n";
   }
   cout << "\n";
-  
-
-
-
-
   }
 };
 
 int main(){
+  Spielfeld spielfeld;
+  int eingabeHöhe, eingabeBreite;
 
+  cout << "Geben sie die Größe ihres Spielfeldes an: \n";
+  cin >> eingabeHöhe;
+  cin >> eingabeBreite;
+
+  spielfeld.setHöhe(eingabeHöhe);
+  spielfeld.setBreite(eingabeBreite);
+
+  spielfeld.bauSpielfeld(spielfeld.getHöhe(), spielfeld.setBreite());
+  return 0;
 }
