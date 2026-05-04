@@ -10,7 +10,7 @@ class Spielfeld{
   void setHöhe(int h){höhe = h;}
   void setBreite(int b){breite = b;}
   int getHöhe(){return höhe;}
-  int setBreite(){return breite;}
+  int getBreite(){return breite;}
 
   void bauSpielfeld(int höhe, int breite){
 
