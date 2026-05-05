@@ -29,21 +29,16 @@ class Spielfeld{
   cout << "\n";
   }
 
-
-
-
   void bauDonutSpielfeld(int radius) {
 
-            for (int i = -radius; i <= radius; i++) {
+        for (int i = -radius; i <= radius; i++) {
             for (int j = -radius; j <= radius; j++) {
-
                 float distanz = sqrt(i * i + j * j);
 
                 if (distanz >= radius / 3.0 && distanz < radius - 0.5 ) {
                     cout << "[_] ";
                 } else {
                   cout << "    ";                   // Wenn es im Loch oder außerhalb des Donuts ist, drucken wir Leerzeichen
-
                 }
             }
             cout << "\n\n";
