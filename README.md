@@ -18,7 +18,18 @@ g++ main.cpp Logik/*.cpp Optik/*.cpp -o minesweeper
   
   - Anzeige.cpp bearbeiten, damit Spielfeld::bauSpielfeld() im main() nützlich wird
   - Und Anzeige::zeichneMenu() -_-
+  - 
 
 ---
 
 ## To-Do [M]
+
+  - Minen und so placeMinen()
+  - Noch mehr Minen smoothMinen()  (bessere Sicherheit für die Schwierigkeit)
+
+_______________
+
+Wer suchet der findet,
+wer drauftritt der verschwindet
+                    -Felix Piel
+_______________
