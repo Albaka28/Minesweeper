@@ -14,3 +14,14 @@ für verschiedene Game Modi.
 
 ~Maxi kannst das hier auch als Notizblatt/ Ideensammelbecken benutzen
 
+
+### Befehl um alles im Terminal zu compilieren!
+
+g++ main.cpp Logik/*.cpp Optik/*.cpp -o minesweeper
+
+
+
+### To-Do [B]
+  
+  - Anzeige.cpp bearbeiten, damit Spielfeld::bauSpielfeld() im main() nützlich wird
+  - Und Anzeige::zeichneMenu() -_-

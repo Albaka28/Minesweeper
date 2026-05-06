@@ -8,9 +8,14 @@ void Anzeige::clearScreen(){
 };
 
 void Anzeige::zeichneMenu(){
+  clearScreen();
+  cout << "";
 
 };
 
 void Anzeige::zeichneSpielfeld(Spielfeld& feld){
+  //clearScreen();
+  //int h = feld.getHöhe();
+  //int b = feld.getBreite();
 
 };
