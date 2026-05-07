@@ -15,10 +15,9 @@ g++ main.cpp Logik/*.cpp Optik/*.cpp -o minesweeper
 ---
 
 ### To-Do [B]
-  
-  - Anzeige.cpp bearbeiten, damit Spielfeld::bauSpielfeld() im main() nützlich wird
+
+  - Mehr drum herrum damit Terminal hübsch aussieht.
   - Und Anzeige::zeichneMenu() -_-
-  - Bro ich brauche Motivation. Such mal dat hübsche görl raus. 🤝
 
 ---
 
