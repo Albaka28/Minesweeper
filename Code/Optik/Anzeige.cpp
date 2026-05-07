@@ -14,8 +14,17 @@ void Anzeige::zeichneMenu(){
 };
 
 void Anzeige::zeichneSpielfeld(Spielfeld& feld){
-  //clearScreen();
-  //int h = feld.getHöhe();
-  //int b = feld.getBreite();
+  clearScreen();
+  
+  int h = feld.getHoehe();
+  int b = feld.getBreite();
+  char** meinArray = feld.getFeld();
+
+  for(int i = 0; i < h; i++){
+    for(int j = 0; j < b; j++){
+      cout << "[" << meinArray[i][j] << "] ";
+    }
+    cout << "\n\n";
+  }
 
 };
