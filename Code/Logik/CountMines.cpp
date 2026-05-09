@@ -134,7 +134,7 @@ void countMinesCenter(int größe_x, int größe_y, Spielfeld& spielfeld){
     for(int i = 1; i < größe_x - 1; i++){
         for(int j = 1; j < größe_y - 1; j++){
             if(!isMine(i,j,spielfeld)){
-                meinSpielfeld[i][j] = countMinesAroundTarget(i,j);
+                meinSpielfeld[i][j] = countMinesAroundTarget(i,j, spielfeld);
             }
         }
     }
@@ -144,7 +144,7 @@ void countMinesNorth(int größe_x, int größe_y, Spielfeld& spielfeld){
     char** meinSpielfeld = spielfeld.getFeld();
     for(int i = 1; i < größe_x - 1; i++){
         if(!isMine(i,0,spielfeld)){
-            meinSpielfeld[i][0] = countMinesAroundTargetNorth(i,0);
+            meinSpielfeld[i][0] = countMinesAroundTargetNorth(i,0, spielfeld);
         }
     }
 }
@@ -153,7 +153,7 @@ void countMinesEast(int größe_x, int größe_y, Spielfeld& spielfeld){
     char** meinSpielfeld = spielfeld.getFeld();
     for(int i = 1; i < größe_y - 1; i++){
         if(!isMine(größe_x-1,i,spielfeld)){
-            meinSpielfeld[größe_x-1][i] = countMinesAroundTargetEast(größe_x-1,i);
+            meinSpielfeld[größe_x-1][i] = countMinesAroundTargetEast(größe_x-1,i, spielfeld);
         }
     }
 }
@@ -162,7 +162,7 @@ void countMinesSouth(int größe_x, int größe_y, Spielfeld& spielfeld){
     char** meinSpielfeld = spielfeld.getFeld();
     for(int i = 1; i < größe_x - 1; i++){ 
         if(!isMine(i,größe_y-1,spielfeld)){
-            meinSpielfeld[i][größe_y-1] = countMinesAroundTargetSouth(i,größe_y-1);
+            meinSpielfeld[i][größe_y-1] = countMinesAroundTargetSouth(i,größe_y-1, spielfeld);
         }
     }
 }
@@ -171,7 +171,7 @@ void countMinesWest(int größe_x, int größe_y, Spielfeld& spielfeld){
     char** meinSpielfeld = spielfeld.getFeld();
     for(int i = 1; i < größe_y - 1; i++){
         if(!isMine(0,i,spielfeld)){
-            meinSpielfeld[0][i] = countMinesAroundTargetWest(0,i);
+            meinSpielfeld[0][i] = countMinesAroundTargetWest(0,i, spielfeld);
         }
     }
 }
@@ -179,16 +179,16 @@ void countMinesWest(int größe_x, int größe_y, Spielfeld& spielfeld){
 void countMinesCorner(int größe_x, int größe_y, Spielfeld& spielfeld){
     char** meinSpielfeld = spielfeld.getFeld();
     if(!isMine(0,0,spielfeld)){
-        meinSpielfeld[0][0] = countMinesAroundTargetCornerLT(0,0);
+        meinSpielfeld[0][0] = countMinesAroundTargetCornerLT(0,0, spielfeld);
     }
     if(!isMine(0,größe_y-1,spielfeld)){
-        meinSpielfeld[0][größe_y-1] = countMinesAroundTargetCornerLB(0,größe_y-1);
+        meinSpielfeld[0][größe_y-1] = countMinesAroundTargetCornerLB(0,größe_y-1, spielfeld);
     }
     if(!isMine(größe_x-1,0,spielfeld)){
-        meinSpielfeld[größe_x-1][0] = countMinesAroundTargetCornerRT(größe_x-1,0);
+        meinSpielfeld[größe_x-1][0] = countMinesAroundTargetCornerRT(größe_x-1,0, spielfeld);
     }
     if(!isMine(größe_x-1,größe_y-1,spielfeld)){
-        meinSpielfeld[größe_x-1][größe_y-1] = countMinesAroundTargetCornerRT(größe_x-1,größe_y-1);
+        meinSpielfeld[größe_x-1][größe_y-1] = countMinesAroundTargetCornerRT(größe_x-1,größe_y-1, spielfeld);
     }
 }
 
