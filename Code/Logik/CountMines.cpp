@@ -10,6 +10,7 @@ void placeNumbers(int größe_x, int größe_y, Spielfeld& spielfeld){
     countMinesEast(größe_x, größe_y);
     countMinesSouth(größe_x, größe_y);
     countMinesWest(größe_x, größe_y);
+    countMinesCorner(größe_x, größe_y);
 }
 
 
