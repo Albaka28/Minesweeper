@@ -14,11 +14,12 @@ int Spielfeld::getRadius() { return radius; }
 
 Spielfeld::~Spielfeld(){
   if(feld != nullptr){
-    for(int i = 0; i < hoehe; i++){
-      delete[] feld[i];
-    }
-    delete[] feld;
-  }
+    for(int i = 0; i < hoehe; i++) {
+            delete[] feld[i];
+            delete[] sichtbar[i];
+        }
+        delete[] feld;
+        delete[] sichtbar;  }
 }
 
 void Spielfeld::initialisierungSpielfeld(int h, int b){
@@ -26,11 +27,14 @@ void Spielfeld::initialisierungSpielfeld(int h, int b){
   breite = b;
 
   feld = new char*[hoehe];
+  sichtbar = new bool*[hoehe];
 
-  for(int i = 0; i < hoehe; i++){
+  for(int i = 0; i < hoehe; i++) {
     feld[i] = new char[breite];
-    for(int j = 0; j < breite; j++){
-      feld[i][j] = ' ';
+      sichtbar[i] = new bool[breite]; // Zeile für Zeile reservieren
+        for(int j = 0; j < breite; j++) {
+          feld[i][j] = ' ';
+            sichtbar[i][j] = false;
     }
   }
 }
@@ -39,7 +43,7 @@ char** Spielfeld::getFeld(){
   return feld;
 }
 
-  void Spielfeld::bauSpielfeld(int hoehe, int breite){
+void Spielfeld::bauSpielfeld(int hoehe, int breite){
 
    for(int i = 0; i < hoehe; i++){
     cout << " [_] ";
@@ -51,7 +55,7 @@ char** Spielfeld::getFeld(){
   cout << "\n";
   }
 
-  void Spielfeld::bauDonutSpielfeld(int radius) {
+void Spielfeld::bauDonutSpielfeld(int radius) {
 
         for (int i = -radius; i <= radius; i++) {
             for (int j = -radius; j <= radius; j++) {
@@ -66,5 +70,18 @@ char** Spielfeld::getFeld(){
             cout << "\n\n";
         }
     }
+
+void Spielfeld::setSichtbar(int x, int y) {
+    if(x >= 0 && x < hoehe && y >= 0 && y < breite) {
+        sichtbar[x][y] = true;
+    }
+}
+
+bool Spielfeld::istSichtbar(int x, int y) {
+    if(x >= 0 && x < hoehe && y >= 0 && y < breite) {
+        return sichtbar[x][y];
+    }
+    return false;
+}
 
 

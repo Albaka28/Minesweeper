@@ -24,7 +24,8 @@ bool checkSieg(int x, int y, Spielfeld& spielfeld){
 }
 
 void feldAufdecken(int x, int y, Spielfeld& spielfeld){
-  cout << "Feld [" << x << "][" << y << "] hat den Wert: " << spielfeld.getFeld()[x][y] << "\n";
+  spielfeld.setSichtbar(x, y);
+  cout << "Feld [" << x << "][" << y << "] wurde entblößt" << spielfeld.getFeld()[x][y] << "\n";
 }
 
 
@@ -55,7 +56,7 @@ Anzeige anzeige;
     cout << "X-Koordinate: (Zeile 0-" << eingabeHoehe - 1 << "): ";
     cin >> y;
 
-    if(aktion = 'a'){
+    if(aktion == 'a'){
       if(checkNiederlage(x, y, spielfeld)){
         cout << "\n Bamm! bist auf eine Mine drauf. GAME OVER! \n";
         gameOver = true;

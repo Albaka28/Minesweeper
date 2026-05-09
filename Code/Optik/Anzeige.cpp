@@ -54,9 +54,12 @@ void Anzeige::zeichneSpielfeld(Spielfeld& feld){
 
   for(int i = 0; i < h; i++){
     for(int j = 0; j < b; j++){
-      cout << "[" << feld.getFeld()[i][j] << "] ";
+      if(feld.istSichtbar(i, j)){ 
+        cout << "[ " << feld.getFeld()[i][j] << " ] ";
+        }else{
+            cout << "[ # ] "; // Zeigt ein verdecktes Feld an
+        }
     }
     cout << "\n\n";
-  }
-
+}
 };

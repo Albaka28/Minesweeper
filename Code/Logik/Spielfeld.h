@@ -8,6 +8,8 @@ private:
     int radius = 0;
     int anzahlBomben = 0;
 
+    bool** sichtbar;
+
     char** feld = nullptr;
 
 public:
@@ -16,16 +18,21 @@ public:
     void setHoehe(int h);
     void setBreite(int b);
     void setRadius(int r);
+    void inFeld(int h, int b);
+    void setSichtbar(int x, int y);
+    void bauDonutSpielfeld(int radius);
+    void bauSpielfeld(int hoehe, int breite);
+    void initialisierungSpielfeld(int h, int b);
+
+
+    bool istSichtbar(int x, int y);
+    
     int getHoehe();
     int getBreite();
     int getRadius();
 
     char** getFeld();
-    void inFeld(int h, int b);
-
-    void bauSpielfeld(int hoehe, int breite);
-    void bauDonutSpielfeld(int radius);
-    void initialisierungSpielfeld(int h, int b);
-};
+   
+   };
 
 #endif
