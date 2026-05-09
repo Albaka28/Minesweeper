@@ -54,7 +54,7 @@ void Anzeige::zeichneSpielfeld(Spielfeld& feld){
 
   for(int i = 0; i < h; i++){
     for(int j = 0; j < b; j++){
-      cout << "[" << meinArray[i][j] << "] ";
+      cout << "[" << feld.getFeld()[i][j] << "] ";
     }
     cout << "\n\n";
   }

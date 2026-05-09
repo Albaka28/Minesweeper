@@ -8,13 +8,14 @@
 using namespace std; 
 
 int checkNachbarn(int x, int y, Spielfeld& spielfeld){
-  // TODO Maxi hier die logik hihi
-  return 0;
+  char** feld = spielfeld.getFeld();
+  char wert = feld[x][y];
+  if(wert == 'M') return -1;
+  return wert - '0';
 }
 
 bool checkNiederlage(int x, int y, Spielfeld& spielfeld){
-  // TODO Hier nur ob auf dem Feld x y eine Bombe ist
-  return 0;
+  return spielfeld.getFeld()[x][y] == 'M';
 }
 
 bool checkSieg(int x, int y, Spielfeld& spielfeld){
@@ -23,7 +24,7 @@ bool checkSieg(int x, int y, Spielfeld& spielfeld){
 }
 
 void feldAufdecken(int x, int y, Spielfeld& spielfeld){
-  // TODO keine Ahnung wie man das umsetzen soll 
+  cout << "Feld [" << x << "][" << y << "] hat den Wert: " << spielfeld.getFeld()[x][y] << "\n";
 }
 
 
@@ -32,8 +33,8 @@ int main(){
 Spielfeld spielfeld;
 Anzeige anzeige;
 
-  int eingabeHoehe = 10;
-  int eingabeBreite = 10;
+  int eingabeHoehe = 15;
+  int eingabeBreite = 15;
   int schwierigkeit = 80;
 
   spielfeld.initialisierungSpielfeld(eingabeHoehe, eingabeBreite); 
