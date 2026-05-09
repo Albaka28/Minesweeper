@@ -22,15 +22,14 @@ g++ main.cpp Logik/*.cpp Optik/*.cpp -o minesweeper
 
 ### To-Do [B]
 
-  - Mehr drum herrum damit Terminal hübsch aussieht.
-  - Und Anzeige::zeichneMenu() -_-
+  - Menu / (T)erminal (I)nterface machen!
 
 ---
 
 ### To-Do [M]
 
-  - Minen und so placeMinen()
   - Noch mehr Minen smoothMinen()  (bessere Sicherheit für die Schwierigkeit)
+  - update deine To-Do Maxi
 
 _______________
 
