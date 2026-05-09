@@ -10,7 +10,7 @@ void placeMinen(int größe_x, int größe_y, int schwierigkeit, Spielfeld& spie
     int MinenListe[100];
 
     for (int i = 0; i < 100; i++){
-        MinenListe[i]++;
+        MinenListe[i] = 0;
     }
 
     // Zufallszeug NICHT ANFASSEN!
@@ -32,6 +32,8 @@ void placeMinen(int größe_x, int größe_y, int schwierigkeit, Spielfeld& spie
             MinenListe[tmp-1]++;
         }
     }
+    int anzahlFelder = größe_x * größe_y;
+    
     //Platziert Minen je nach Schwierigkeit
     for (int i = 0; i < größe_x; i++){
         for (int j = 0; j < größe_y; j++){
@@ -41,7 +43,6 @@ void placeMinen(int größe_x, int größe_y, int schwierigkeit, Spielfeld& spie
             }
         }
     }
-    int anzahlFelder = größe_x * größe_y;
-    int fehlerToleranz = 1;
+    //int fehlerToleranz = 1;
     //if ()
 }
