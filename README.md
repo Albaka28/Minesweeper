@@ -6,10 +6,10 @@ für verschiedene Game Modi.
 
 ---
 ## Schlachtplan / Aufgabenpool:
-- Game-Loop while(!hameOver) oder so
-- Sichtbares und Unsichtbares Feld (2d-Array für Spieler und für Spiel)
-- Nachbarzahl eines Feldes berechnen
-- Engabe 
+- Game-Loop while(!hameOver) oder so                                            ✓
+- Sichtbares und Unsichtbares Feld (2d-Array für Spieler und für Spiel)         ✓
+- Nachbarzahl eines Feldes berechnen                                            ✓
+- Engabe                                                                        -
 - Game-Loop beenden (Win/Lose)
 
 ---
