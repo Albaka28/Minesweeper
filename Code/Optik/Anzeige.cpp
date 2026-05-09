@@ -8,8 +8,40 @@ void Anzeige::clearScreen(){
 };
 
 void Anzeige::zeichneMenu(){
-  clearScreen();
-  cout << "";
+  bool imMenu = true;
+  int auswahl = 0;
+
+  while(imMenu){
+    clearScreen();
+        cout << "====================================\n";
+        cout << "       MINESWEEPER TERMINAL         \n";
+        cout << "====================================\n\n";
+
+        cout << "1. Neues Spiel \n";
+        cout << "2. Einstellungen \n";
+        cout << "3. Beenden \n";
+
+        cout << flush;
+        cin >> auswahl;
+
+        switch (auswahl) {
+          case 1:
+            imMenu = false;
+            break;
+
+          case 2:
+            cout << "später mache ich das frfr \n";
+            break;
+
+          case 3:
+            exit(0);
+            break;
+
+          default:
+            cout << "Gib richitg ein du kek!";
+            break;
+        }
+  }
 
 };
 

@@ -14,23 +14,18 @@ Anzeige anzeige;
   int eingabeHoehe; 
   int eingabeBreite;
   int eingabeRadius;
-  int schwierigkeit = 80;
+  int schwierigkeit = 50;
 
   cout << "Geben sie die Größe ihres Spielfeldes an: \n";
   cin >> eingabeHoehe;
   cin >> eingabeBreite;
-  // cin >> eingabeRadius;
-
-  // spielfeld.setHoehe(eingabeHoehe);
-  // spielfeld.setBreite(eingabeBreite);
-  // spielfeld.setRadius(eingabeRadius);
-
-  // spielfeld.bauSpielfeld(spielfeld.getHoehe(), spielfeld.setBreite());
-  // cout << "\nHier ist dein Donut:\n\n";
-  // spielfeld.bauDonutSpielfeld(eingabeRadius);
 
   spielfeld.initialisierungSpielfeld(eingabeHoehe, eingabeBreite); 
   placeMinen(eingabeHoehe, eingabeBreite, schwierigkeit, spielfeld);
   anzeige.zeichneSpielfeld(spielfeld);
+
+
+
+
   return 0;
 }

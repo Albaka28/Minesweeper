@@ -4,7 +4,13 @@ Ein im Terminal lebendes Mini-Spiel was [Am Ende] als eine TUI Fenster gespielt 
 Die Minesweeper-Regeln werden in der Anfangsphase nicht geändert jedoch nimmt mann sich nicht die Möglichkeit
 für verschiedene Game Modi.
 
-~Maxi kannst das hier auch als Notizblatt/ Ideensammelbecken benutzen
+---
+## Schlachtplan / Aufgabenpool:
+- Game-Loop while(!hameOver) oder so
+- Sichtbares und Unsichtbares Feld (2d-Array für Spieler und für Spiel)
+- Nachbarzahl eines Feldes berechnen
+- Engabe 
+- Game-Loop beenden (Win/Lose)
 
 ---
 
@@ -21,7 +27,7 @@ g++ main.cpp Logik/*.cpp Optik/*.cpp -o minesweeper
 
 ---
 
-## To-Do [M]
+### To-Do [M]
 
   - Minen und so placeMinen()
   - Noch mehr Minen smoothMinen()  (bessere Sicherheit für die Schwierigkeit)
