@@ -2,13 +2,13 @@
 #include "CountMinesEx.h"
 #include <stdexcept>
 
-int countMinesAroundTarget(int posX, int posY, Spielfeld& spielfeld){
+int countMinesAroundTarget(int posX, int posY, Spielfeld& field){
     int amountOfMines = 0;
-    char** meinSpielfeld = spielfeld.getFeld();
+    char** myField = field.getFeld();
     try{
         for(int i = posX - 1; i < posX + 2; i++){
             for(int j = posY - 1; j < posY + 2; j++){
-                if(isMine(i,j,spielfeld)){
+                if(isMine(i,j,field)){
                     amountOfMines++;
                 }
             }
@@ -18,18 +18,18 @@ int countMinesAroundTarget(int posX, int posY, Spielfeld& spielfeld){
     return amountOfMines;
 }
 
-void countMines(int größe_x, int größe_y, Spielfeld& spielfeld){
-    char** meinSpielfeld = spielfeld.getFeld();
-    for(int i = 1; i < größe_x - 1; i++){
-        for(int j = 1; j < größe_y - 1; j++){
-            if(!isMine(i,j,spielfeld)){
-                meinSpielfeld[i][j] = countMinesAroundTarget(i,j, spielfeld) + '0';
+void countMines(int SizeX, int SizeY, Spielfeld& field){
+    char** myField = field.getFeld();
+    for(int i = 1; i < SizeX - 1; i++){
+        for(int j = 1; j < SizeY - 1; j++){
+            if(!isMine(i,j,field)){
+                myField[i][j] = countMinesAroundTarget(i,j,field) + '0';
             }
         }
     }
 }
 
-bool isMine(int posX, int posY, Spielfeld& spielfeld){
-    char** meinSpielfeld = spielfeld.getFeld();
-    return meinSpielfeld[posX][posY] == 'M';
+bool isMine(int posX, int posY, Spielfeld& field){
+    char** myField = field.getFeld();
+    return myField[posX][posY] == 'M';
 }
