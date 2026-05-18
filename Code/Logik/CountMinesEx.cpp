@@ -4,17 +4,17 @@
 
 int countMinesAroundTarget(int posX, int posY, Spielfeld& field){
     int amountOfMines = 0;
-    char** myField = field.getFeld();
-    try{
-        for(int i = posX - 1; i < posX + 2; i++){
-            for(int j = posY - 1; j < posY + 2; j++){
+    char** myField = field.getFeld(); 
+    for(int i = posX - 1; i < posX + 2; i++){
+        for(int j = posY - 1; j < posY + 2; j++){
+            try{
                 if(isMine(i,j,field)){
                     amountOfMines++;
                 }
             }
+            catch(...){}
         }
     }
-    catch(...){}
     return amountOfMines;
 }
 
