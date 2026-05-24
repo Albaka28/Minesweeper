@@ -1,10 +1,15 @@
 #include <iostream>
 #include <cmath>
 #include "Logik/Spielfeld.h"
+<<<<<<< HEAD
 #include "Logik/MinenGeneration.h"
 #include "Logik/ActionOnClick.h" 
+=======
+#include "Logik/SetUpMines.h"
+#include "Logik/ActionOnClick.h"                                            // hier kommen dann die anderen Klassen hin
+>>>>>>> 266396862f037dd49db51f5c2d85c68f2a4d83a9
 #include "Optik/Anzeige.h"
-#include "Logik/CountMines.h"
+#include "Logik/CountMinesEx.h"
 
 using namespace std; 
 
@@ -37,7 +42,7 @@ Anzeige anzeige;
 
   int eingabeHoehe = 15;
   int eingabeBreite = 15;
-  int schwierigkeit = 80;
+  int schwierigkeit = 15;
 
   spielfeld.initialisierungSpielfeld(eingabeHoehe, eingabeBreite); 
   placeMinen(eingabeHoehe, eingabeBreite, schwierigkeit, spielfeld);
