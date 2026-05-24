@@ -1,7 +1,8 @@
 #include <iostream>
 #include <cmath>
 #include "Logik/Spielfeld.h"
-#include "Logik/MinenGeneration.h"                                              // hier kommen dann die anderen Klassen hin
+#include "Logik/MinenGeneration.h"
+#include "Logik/ActionOnClick.h" 
 #include "Optik/Anzeige.h"
 #include "Logik/CountMines.h"
 
