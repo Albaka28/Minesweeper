@@ -1,0 +1,23 @@
+build/
+.gdb_history
+
+
+cmake-build*/
+.idea/
+.vscode/
+.vs/
+
+.DS_Store
+main
+*:Zone.Identifier
+**/*:Zone.Identifier
+
+
+# Kompilierte Dateien (falls sie doch mal außerhalb von build landen)
+*.o
+*.a
+*.so
+*.out
+
+# Betriebssystem-Müll
+Thumbs.db
