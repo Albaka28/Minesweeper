@@ -2,6 +2,8 @@
 #include "CountMinesEx.h"
 #include <stdexcept>
 
+
+
 int countMinesAroundTarget(int posX, int posY, Spielfeld& field){
     int amountOfMines = 0;
     char** myField = field.getFeld(); 
